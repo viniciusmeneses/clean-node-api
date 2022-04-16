@@ -11,6 +11,8 @@
     ],
     "import/prefer-default-export": "off",
     "class-methods-use-this": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "curly": ["error", "multi-or-nest"],
+    "nonblock-statement-body-position": "off"
   }
 }
