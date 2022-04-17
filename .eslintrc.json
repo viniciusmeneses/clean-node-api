@@ -26,6 +26,7 @@
       }
     ],
     "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
-    "max-classes-per-file": "off"
+    "max-classes-per-file": "off",
+    "object-curly-newline": ["error", { "multiline": true}]
   }
 }
