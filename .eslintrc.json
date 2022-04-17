@@ -1,19 +1,56 @@
 {
-  "extends": ["airbnb-base", "airbnb-typescript/base"],
+  "env": {
+    "jest": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/quotes": ["error", "double"],
-    "@typescript-eslint/no-unused-vars": [
+    "camelcase": "off",
+    "import/no-unresolved": "error",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "lines-between-class-members": "off",
+    "import/extensions": [
       "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.spec.ts", "jest.config.ts"] }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
       { "argsIgnorePattern": "^_" }
     ],
-    "import/prefer-default-export": "off",
-    "class-methods-use-this": "off",
-    "consistent-return": "off",
-    "curly": ["error", "multi-or-nest"],
-    "nonblock-statement-body-position": "off",
+    "prettier/prettier": "error",
+    "max-classes-per-file": "off",
     "no-restricted-syntax": [
       "error",
       {
@@ -25,8 +62,11 @@
         "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
       }
     ],
-    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
-    "max-classes-per-file": "off",
-    "object-curly-newline": ["error", { "multiline": true}]
+    "consistent-return": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
