@@ -5,8 +5,10 @@
   "author": "Vinicius Meneses <vinicius.meneses@tagview.com.br>",
   "license": "MIT",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^2.2.1",
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.4.1",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^17.0.24",
     "@types/validator": "^13.7.2",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
@@ -37,6 +39,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "mongodb": "^4.5.0",
     "validator": "^13.7.0"
   }
 }
