@@ -41,7 +41,7 @@
     ],
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.spec.ts", "jest.config.ts"] }
+      { "devDependencies": ["**/*.spec.ts", "**/*.test.ts", "jest.config.ts"] }
     ],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
